@@ -1,0 +1,38 @@
+package separatingOfDigits;
+
+import java.util.Scanner;
+public class SeparatingOfDigits 
+{
+
+
+    public static void main(String[] args) 
+    {
+        Scanner x = new Scanner(System.in);
+        System.out.print("Enter the number :"  );
+        long number = x.nextInt();
+        long a ;
+        long b =1;
+        long i = 1;
+        int length=0;
+
+            while(b!=0)
+            {
+            a = number/i;
+            b = a%10;
+            i*=10 ;
+            }
+
+        for(long c=i/100;c>0;c/=10 )
+        {
+            length++;
+            a = number/c;
+            b = a%10;
+            
+            System.out.print(b+"\t");
+            
+        }
+        System.out.print("\nThe length ="+length);
+
+    }
+    
+}
